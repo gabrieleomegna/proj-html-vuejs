@@ -11,6 +11,14 @@
       }
     }
 </script>
+<!-- ? ATTENZIONE: in tutto il layout abbiamo una dimensione di container uguale in molte sezioni:
+     ? prime due sezioni dell'header;
+     ? tutte le sezioni del main, eccetto la prima e l'ultima; 
+     ? la prima sezione del footer
+     ? per le altre posso o lasciarle nel container e aggiustarlo con il padding,
+     ? oppure fare io manualmente il container-->
+<!-- Tutto ciò dando per scontato di usare bootstrap -->
+
 
 <template>
     <AppHeader/>
