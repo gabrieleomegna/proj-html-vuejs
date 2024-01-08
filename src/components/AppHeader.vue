@@ -4,12 +4,11 @@
         <section class="call-section">
             <!-- Questa sezione è molto simile all'ultima del footer, ma con alcune parti in meno
                  e, soprattutto, le due 'parti' in cui è divisa sono in linea, MENTRE NEL FOOTER SONO IN COLONNA  -->
-
+            <!-- ? dimensione comune -->
         </section>
         <div id="same-bg">
             <nav class="navbar">
-                <!-- Anche questa sezione è molto simile alla prima sezione del footer, in particolare 
-                alla colonna centrale di quella sezione -->
+                <!-- Questa sezione sarà popolata con le voci di menu CHE ARRIVERANNO DIRETTAMENTE DALL'APP VUE TRAMITE PROPS-->
             </nav>
             <section class="jumbotron">
                 <!-- Questa sezione per me è palesemente un jumbotron -->
