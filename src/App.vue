@@ -1,0 +1,9 @@
+<script>
+</script>
+
+<template>
+</template>
+
+<style lang="scss" scoped>
+  @use './styles/generals.scss' as *;
+</style>
