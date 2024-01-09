@@ -1,3 +1,18 @@
+<script>
+    export default {
+        props : {
+            phoneNumber : {
+                type: String,
+                required: true
+            },
+            menuItems : {
+                type: Array,
+                required: true
+            }
+        }
+    }
+</script>
+
 <template>
     <header>
         <!-- ? Qua secondo me l'header è diviso in 4 parti, che potrebbero diventare componenti -->
@@ -21,7 +36,12 @@
         <div id="same-bg">
             <nav class="container">
                 <!-- Questa sezione sarà popolata con le voci di menu CHE ARRIVERANNO DIRETTAMENTE DALL'APP VUE TRAMITE PROPS-->
-
+                <section>
+                    <span>Logo</span>
+                </section>
+                <section id="menu-items">
+                    <span>{{ menuItems[0].label }}</span>
+                </section>
             </nav>
             <section class="jumbotron">
                 <!-- Questa sezione per me è palesemente un jumbotron -->
@@ -35,17 +55,7 @@
         </section>
     </header>
 </template>
-<script>
-    export default {
-        props : {
-            phoneNumber : {
-                type: String,
-                required: true
-            },
-            
-        }
-    }
-</script>
+
 <style lang="scss" scoped>
     @use '../styles/partials/mixins' as *;
     @use '../styles/partials/variables' as *;
@@ -62,5 +72,8 @@
             }
         }
     }
-    
+
+    nav.container {
+        @include flex(row, space-between, center)
+    }
 </style>

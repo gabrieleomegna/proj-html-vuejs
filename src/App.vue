@@ -11,7 +11,13 @@
       },
       data() {
         return {
-          companyTelephoneNumber: '1.800.555.6789'
+          companyTelephoneNumber: '1.800.555.6789',
+          menuItems: [
+            {
+              label: 'Home',
+              link : ''
+            }
+          ]
         }
       }
     }
@@ -26,7 +32,8 @@
 
 
 <template>
-    <AppHeader :phoneNumber = "companyTelephoneNumber"/>
+    <AppHeader :phoneNumber = "companyTelephoneNumber"
+               :menuItems = "menuItems"/>
     <AppMain/>
     <AppFooter/>
 </template>
