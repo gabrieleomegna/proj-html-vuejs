@@ -18,8 +18,20 @@
     </main>
 </template>
 <script>
+import AppAward from './mainComponents/AppAward.vue';
+import ServiceSolution from './mainComponents/ServiceSolution.vue';
+import MoveWithEase from './mainComponents/MoveWithEase.vue';
+import AppTestimonials from './mainComponents/AppTestimonials.vue';
+import RequestFreeQuote from './mainComponents/RequestFreeQuote.vue';
+
 export default {
-    
+    components: {
+        AppAward,
+        ServiceSolution,
+        MoveWithEase,
+        AppTestimonials,
+        RequestFreeQuote
+    }    
 }
 </script>
 <style lang="scss" scoped>
