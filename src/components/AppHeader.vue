@@ -1,17 +1,27 @@
 <template>
     <header>
         <!-- ? Qua secondo me l'header è diviso in 4 parti, che potrebbero diventare componenti -->
-        <section class="call-section container">
+        <section class="call-section">
             <!-- Questa sezione è molto simile all'ultima del footer, ma con alcune parti in meno
                  e, soprattutto, le due 'parti' in cui è divisa sono in linea, MENTRE NEL FOOTER SONO IN COLONNA  -->
             <!-- ? dimensione comune -->
-            <div> <!-- Number to call -->
-                <p>Call us for a Free Quote: {{ phoneNumber }}</p>
+            <div class="container">
+                <section id="number-to-call"> <!-- Number to call -->
+                    <i class="fa-solid fa-phone-flip"></i>
+                    <span>Call us for a Free Quote: {{ phoneNumber }}</span>
+                </section>
+                <section> <!-- Brands symbol -->
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                </section>
             </div>
         </section>
         <div id="same-bg">
-            <nav class="navbar">
+            <nav class="container">
                 <!-- Questa sezione sarà popolata con le voci di menu CHE ARRIVERANNO DIRETTAMENTE DALL'APP VUE TRAMITE PROPS-->
+
             </nav>
             <section class="jumbotron">
                 <!-- Questa sezione per me è palesemente un jumbotron -->
@@ -27,11 +37,30 @@
 </template>
 <script>
     export default {
-        props : [
-            'phoneNumber'
-        ]
+        props : {
+            phoneNumber : {
+                type: String,
+                required: true
+            },
+            
+        }
     }
 </script>
 <style lang="scss" scoped>
+    @use '../styles/partials/mixins' as *;
+    @use '../styles/partials/variables' as *;
+
+    .call-section {
+        background-color: $hdr-ftr-bg-color;
+        color: white;
+        padding: .7rem 0;
+        .container {
+            @include flex (row, space-between, center);
+            * > * {
+                font-size: .7rem;
+                margin-left: 1rem;
+            }
+        }
+    }
     
 </style>
