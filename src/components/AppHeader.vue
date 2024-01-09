@@ -40,7 +40,7 @@
                     <span>Logo</span>
                 </section>
                 <section id="menu-items">
-                    <span>{{ menuItems[0].label }}</span>
+                    <span v-for="singleItem in menuItems">{{ singleItem.label }}</span>
                 </section>
             </nav>
             <section class="jumbotron">
