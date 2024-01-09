@@ -29,11 +29,11 @@ export default {
         text-transform: uppercase;
         font-weight: bold;
         font-size: .7rem;
-        .small {
-            // background-color: blue;
-        }
-        .big {
-            // background-color: orange;
-        }
+        // .small {
+        //     background-color: blue;
+        // }
+        // .big {
+        //     background-color: orange;
+        // }
     }
 </style>

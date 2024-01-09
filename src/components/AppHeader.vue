@@ -2,8 +2,8 @@
     import ButtonComponent from './smallComponents/ButtonComponent.vue';
     export default {
         components : {
-    ButtonComponent,
-},
+            ButtonComponent,
+        },
         props : {
             phoneNumber : {
                 type: String,
@@ -13,7 +13,7 @@
                 type: Array,
                 required: true
             }
-        }
+        },
     }
 </script>
 
@@ -40,8 +40,8 @@
         <div id="same-bg">
             <nav class="container">
                 <!-- Questa sezione sarà popolata con le voci di menu CHE ARRIVERANNO DIRETTAMENTE DALL'APP VUE TRAMITE PROPS-->
-                <section>
-                    <span>Logo</span>
+                <section id="logo">
+                    <img src="../assets/img/avada-movers-logo.png" alt="Company logo">
                 </section>
                 <section id="menu-items">
                     <span v-for="singleItem in menuItems">{{ singleItem.label }}</span>
@@ -73,13 +73,24 @@
         .container {
             @include flex (row, space-between, center);
             * > * {
-                font-size: .7rem;
+                font-size: .65rem;
                 margin-left: 1rem;
             }
         }
     }
-
+    
     nav.container {
-        @include flex(row, space-between, center)
+        @include flex(row, space-between, center);
+        padding: .7rem 0 .7rem 1rem;
+        section#menu-items > * {
+            margin-left: 2rem;
+        };
+        section#menu-items > span {
+            font-size: .7rem;
+            font-weight: 900;
+        }
+        section#logo img{
+            width: 135px;
+        }
     }
 </style>
