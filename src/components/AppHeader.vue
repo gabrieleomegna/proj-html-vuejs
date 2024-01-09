@@ -1,5 +1,9 @@
 <script>
+    import ButtonComponent from './smallComponents/ButtonComponent.vue';
     export default {
+        components : {
+    ButtonComponent,
+},
         props : {
             phoneNumber : {
                 type: String,
@@ -41,6 +45,8 @@
                 </section>
                 <section id="menu-items">
                     <span v-for="singleItem in menuItems">{{ singleItem.label }}</span>
+                    <ButtonComponent :size="'small'"
+                                     :content="'Free Quote'" />
                 </section>
             </nav>
             <section class="jumbotron">
