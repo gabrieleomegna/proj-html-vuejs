@@ -8,6 +8,11 @@
         AppHeader,
         AppMain,
         AppFooter
+      },
+      data() {
+        return {
+          companyTelephoneNumber: '1.800.555.6789'
+        }
       }
     }
 </script>
@@ -21,11 +26,11 @@
 
 
 <template>
-    <AppHeader/>
+    <AppHeader :phoneNumber = "companyTelephoneNumber"/>
     <AppMain/>
     <AppFooter/>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
   @use './styles/generals.scss' as *;
 </style>

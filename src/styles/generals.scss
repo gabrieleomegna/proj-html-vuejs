@@ -1,0 +1,14 @@
+@use './partials/variables' as *;
+@use './partials/mixins' as *;
+
+* {
+    @include reset;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    width: 65%;
+}

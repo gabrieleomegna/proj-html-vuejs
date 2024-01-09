@@ -1,10 +1,13 @@
 <template>
     <header>
         <!-- ? Qua secondo me l'header è diviso in 4 parti, che potrebbero diventare componenti -->
-        <section class="call-section">
+        <section class="call-section container">
             <!-- Questa sezione è molto simile all'ultima del footer, ma con alcune parti in meno
                  e, soprattutto, le due 'parti' in cui è divisa sono in linea, MENTRE NEL FOOTER SONO IN COLONNA  -->
             <!-- ? dimensione comune -->
+            <div> <!-- Number to call -->
+                <p>Call us for a Free Quote: {{ phoneNumber }}</p>
+            </div>
         </section>
         <div id="same-bg">
             <nav class="navbar">
@@ -23,9 +26,11 @@
     </header>
 </template>
 <script>
-export default {
-    
-}
+    export default {
+        props : [
+            'phoneNumber'
+        ]
+    }
 </script>
 <style lang="scss" scoped>
     
