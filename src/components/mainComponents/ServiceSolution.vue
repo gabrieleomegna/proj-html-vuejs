@@ -8,7 +8,7 @@
     </section>
 </template>
 <script>
-import ServiceCard from './ServiceCard.vue';
+import ServiceCard from './cards/ServiceCard.vue';
 export default {
     components: {
         ServiceCard

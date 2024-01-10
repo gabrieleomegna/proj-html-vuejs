@@ -1,7 +1,7 @@
 <template>
     <article class="service-card">
         <div class="img-card">
-            <img :src="getImagePath(`../../assets/img/${singleSolution.pathImage}`)" alt="">
+            <img :src="getImagePath(`../../../assets/img/${singleSolution.pathImage}`)" alt="">
         </div>
         <div class="description-card">
             <h3>{{singleSolution.title}}</h3>
@@ -14,7 +14,7 @@
     </article>
 </template>
 <script>
-import ButtonComponent from '../smallComponents/ButtonComponent.vue';
+import ButtonComponent from '../../smallComponents/ButtonComponent.vue';
 export default {
     components: {
         ButtonComponent
@@ -33,7 +33,7 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-@use '../../styles/partials/variables' as *;
+@use '../../../styles/partials/variables' as *;
 article.service-card{
     width: calc((100%/3) - 2rem);
     padding: 1rem;
