@@ -31,7 +31,7 @@ export default {
         MoveWithEase,
         AppTestimonials,
         RequestFreeQuote
-    }    
+    }
 }
 </script>
 <style lang="scss" scoped>

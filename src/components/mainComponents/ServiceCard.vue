@@ -1,11 +1,11 @@
 <template>
     <article class="service-card">
         <div class="img-card">
-            <img src="../../assets/img/avada-movers-serviceonephoto-final.jpg" alt="">
+            <img :src="getImagePath(`../../assets/img/${singleSolution.pathImage}`)" alt="">
         </div>
         <div class="description-card">
-            <h3>Two Man Teams</h3>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus, labore commodi? Recusandae eligendi placeat a omnis. Non praesentium nihil mollitia cumque repellat, at</p>
+            <h3>{{singleSolution.title}}</h3>
+            <p>{{singleSolution.description}}</p>
             <div class="card-btn-container">
                 <ButtonComponent :size="'small'"
                                  :content="'Read More'"/>
@@ -18,6 +18,17 @@ import ButtonComponent from '../smallComponents/ButtonComponent.vue';
 export default {
     components: {
         ButtonComponent
+    },
+    props:{
+        singleSolution: {
+            type: Object,
+            required: true,
+        }
+    },
+    methods: {
+        getImagePath: function (imgPath) {
+            return new URL(imgPath, import.meta.url).href;
+        }
     }
 }
 </script>
@@ -28,9 +39,9 @@ article.service-card{
     padding: 1rem;
     background-color: $card-bg;
     .img-card {
-        margin-bottom: .5rem;
+        margin-bottom: 1rem;
         img {
-        width: 100%;
+            width: 100%;
         }
     }
     .description-card {
