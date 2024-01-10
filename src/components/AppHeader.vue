@@ -37,7 +37,7 @@
                 </section>
             </div>
         </section>
-        <div id="same-bg">
+        <div id="same-bg-img">
             <nav class="container">
                 <!-- Questa sezione sarà popolata con le voci di menu CHE ARRIVERANNO DIRETTAMENTE DALL'APP VUE TRAMITE PROPS-->
                 <section id="logo">
@@ -53,11 +53,15 @@
                 <!-- Questa sezione per me è palesemente un jumbotron -->
                 <!-- ? ATTENZIONE jumbotron e navbar hanno lo sfondo in comune,
                      ? perciò li ho messi all'interno di un div unico -->
-    
+                <div id="jmbt-block">
+                    <p>Moving without the hassle</p>
+                    <h1>We make it simple</h1>
+                    <p>Professional service with quality and customer satisfaction</p>
+                </div>
             </section>
         </div>
         <section id="blue-free-quote">
-
+            <p><i class="fa-regular fa-paper-plane"></i> <span>Get a free quote online now</span></p>
         </section>
     </header>
 </template>
@@ -66,6 +70,7 @@
     @use '../styles/partials/mixins' as *;
     @use '../styles/partials/variables' as *;
 
+    /***  Small section green ****/
     .call-section {
         background-color: $hdr-ftr-bg-color;
         color: white;
@@ -79,6 +84,7 @@
         }
     }
     
+    /***  NAVBAR ****/
     nav.container {
         @include flex(row, space-between, center);
         padding: .7rem 0 .7rem 1rem;
@@ -93,4 +99,47 @@
             width: 135px;
         }
     }
+
+    /***  JUMBOTRON ****/
+    .jumbotron {
+        height: 500px;
+        @include flex(row, center, center);
+        #jmbt-block > * {
+            margin-bottom: .5rem;
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: 900;
+        };
+        #jmbt-block p:first-child,
+        #jmbt-block p:nth-child(3) {
+            color: rgb(124, 120, 120);
+            font-size: .67rem;
+        }
+        #jmbt-block h1{
+            font-size: 2.6rem;
+        }
+    }
+    /* Bg image */
+    div#same-bg-img{
+        background-image: url('../assets/img/avada-movers-homeherobackground-final.jpg');
+        background-position: top;
+        background-size: 1800px;
+        background-repeat: no-repeat;
+    }
+
+    /* Blue free quote section */
+    section#blue-free-quote{
+        padding: 2rem;
+        background-color: $section-free-quote-bg;
+        p {
+            text-align: center;
+            text-transform: uppercase;
+            color: white;
+            font-size: .78rem;
+            span {
+                margin-left: .4rem;
+            }
+        }
+    }
+
 </style>
