@@ -7,7 +7,7 @@
                      con le voci di menu CHE ARRIVANO DIRETTAMENTE DALL'APP VUE TRAMITE PROPS-->
                 <div class="ftr-block">
                     <h4>About</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam cum a praesentium quod itaque reiciendis libero accusamus ratione tempore aliquam? Nulla omnis corrupti placeat fugiat distinctio sunt sequi, blanditiis corporis!</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam cum a praesentium quod itaque reiciendis libero accusamus ratione tempore aliquam? Nulla omnis corrupti  </p>
                     <p></p>
                 </div>
                 <div class="ftr-block">
@@ -65,8 +65,8 @@ footer {
             padding: 3rem 0;
             background-color: white;
             .ftr-block{
-                width: calc((100%/3) - 1rem);
-                margin-right: .5rem;
+                width: calc((100%/3) - 3rem);
+                margin-right: 1.5rem;
                 ul {
                     list-style-type: none;
                     *:not(h4) {
@@ -81,7 +81,7 @@ footer {
             }
             .ftr-block:first-child p{
                 text-align: start;
-                line-height: 1.3rem;  
+                line-height: 1.5rem;  
                 font-size: .7rem;
                 font-weight: 500;
             };
