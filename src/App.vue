@@ -36,9 +36,52 @@
             {
               label: 'Contact',
               link: ''
+            }
+          ],
+          ftrMenuItems: [
+            {
+              label: 'Home',
+              link : ''
             },
-
-          ]
+            {
+              label: 'Rates',
+              link: ''
+            },
+            {
+              label: 'Testimonials',
+              link: ''
+            },
+            {
+              label: 'Blog',
+              link: ''
+            },
+            {
+              label: 'Free Quote',
+              link: ''
+            }
+          ],
+          ftrRecentPosts: [
+            {
+              string: 'Heading Out To College?',
+              link : ''
+            },
+            {
+              string: 'Moving Your Business?',
+              link: ''
+            },
+            {
+              string: 'Outstanding Quality',
+              link: ''
+            },
+            {
+              string: 'Cost of Moving',
+              link: ''
+            },
+            {
+              string: 'Best Moving Tips',
+              link: ''
+            }
+          ],
         }
       }
     }
@@ -56,7 +99,8 @@
     <AppHeader :phoneNumber = "companyTelephoneNumber"
                :menuItems = "navMenuItems"/>
     <AppMain/>
-    <AppFooter/>
+    <AppFooter :menuItems="ftrMenuItems"
+               :recentPostItems="ftrRecentPosts"/>
 </template>
 
 <style lang="scss">
