@@ -56,7 +56,6 @@ section#service-solution {
     h2 {
         font-size: 2rem;
         font-weight: 900;
-        color: $titles-color;
         margin-bottom: 2.5rem;
     };
     .container {

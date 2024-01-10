@@ -47,7 +47,6 @@ section#award {
             line-height: 1.5rem;
         };
         h2 {
-            color: $titles-color;
             width: 70%;
             font-size: 2.2rem;
             font-weight: 900;

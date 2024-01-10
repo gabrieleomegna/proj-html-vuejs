@@ -1,6 +1,8 @@
 <template>
     <section id="request-free-quote">
-
+        <h2>
+            
+        </h2>
     </section>
 </template>
 <script>
