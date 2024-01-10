@@ -1,15 +1,25 @@
 <template lang="">
     <article class="testimonial-card">
         <div class="card-img">
-            <img src="../../../assets/img/avada-movers-johndoe-final.jpg" alt="">
+            <img :src="getImagePath(`../../../assets/img/${singleTestimonial.pathImage}`)" alt="">
         </div>
-        <h3>Jhon Doe</h3>
-        <p><em>"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores repellat, mollitia obcaecati ad sit soluta dignissimos saepe ea qui dolorum ducimus. Tempora dignissimos dolorum eligendi?"</em></p>
+        <h3>{{singleTestimonial.name}}</h3>
+        <p><em>{{singleTestimonial.description}}</em></p>
     </article>
 </template>
 <script>
 export default {
-    
+    props: {
+        singleTestimonial: {
+            type: Object,
+            required: true
+        }
+    },
+    methods: {
+        getImagePath: function (imgPath) {
+            return new URL(imgPath, import.meta.url).href;
+        }
+    }
 }
 </script>
 <style lang="scss" scoped>
